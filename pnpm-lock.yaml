@@ -1,11 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/node': ^18.7.14
   '@vitejs/plugin-vue': ^3.0.3
   concurrently: ^7.3.0
   cross-env: ^7.0.3
   electron: ^20.1.0
   electron-builder: ^23.3.3
+  material-design-icons-iconfont: ^6.7.0
   sass: ^1.54.8
   typescript: ^4.6.4
   vite: ^3.0.7
@@ -14,10 +16,12 @@ specifiers:
   wait-on: ^6.0.1
 
 dependencies:
+  material-design-icons-iconfont: 6.7.0
   sass: 1.54.8
   vue: 3.2.38
 
 devDependencies:
+  '@types/node': 18.7.14
   '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.38
   concurrently: 7.3.0
   cross-env: 7.0.3
@@ -191,7 +195,7 @@ packages:
   /@types/keyv/3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 16.11.56
+      '@types/node': 18.7.14
     dev: true
 
   /@types/minimatch/5.1.2:
@@ -222,7 +226,7 @@ packages:
   /@types/responselike/1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 16.11.56
+      '@types/node': 18.7.14
     dev: true
 
   /@types/verror/1.10.6:
@@ -244,7 +248,7 @@ packages:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 16.11.56
+      '@types/node': 18.7.14
     dev: true
     optional: true
 
@@ -1859,6 +1863,10 @@ packages:
       escape-string-regexp: 4.0.0
     dev: true
     optional: true
+
+  /material-design-icons-iconfont/6.7.0:
+    resolution: {integrity: sha512-lSj71DgVv20kO0kGbs42icDzbRot61gEDBLQACzkUuznRQBUYmbxzEkGU6dNBb5fRWHMaScYlAXX96HQ4/cJWA==}
+    dev: false
 
   /mime-db/1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}

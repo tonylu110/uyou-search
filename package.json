@@ -14,10 +14,12 @@
     "electron": "wait-on tcp:5200 && cross-env NODE_ENV=development electron ."
   },
   "dependencies": {
+    "material-design-icons-iconfont": "^6.7.0",
     "sass": "^1.54.8",
     "vue": "^3.2.37"
   },
   "devDependencies": {
+    "@types/node": "^18.7.14",
     "@vitejs/plugin-vue": "^3.0.3",
     "concurrently": "^7.3.0",
     "cross-env": "^7.0.3",

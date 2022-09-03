@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 
 let mainWindow
@@ -16,7 +16,10 @@ function createWindow () {
     resizable: false,
     alwaysOnTop: true,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      enableRemoteModule: true,
+      nodeIntegration: true,
+      contextIsolation: false
     }
   })
 
@@ -29,6 +32,10 @@ function createWindow () {
   if (NODE_ENV === 'development') {
     mainWindow.webContents.openDevTools({ mode: 'detach' })
   }
+
+  ipcMain.on("window-close", () => {
+    app.quit();
+  });
 }
 
 app.whenReady().then(() => {

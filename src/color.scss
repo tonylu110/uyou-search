@@ -1,0 +1,9 @@
+@mixin font-color {
+  @media (prefers-color-scheme: light) {
+    color: black;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: white
+  }
+}
