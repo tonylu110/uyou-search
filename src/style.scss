@@ -1,0 +1,30 @@
+@mixin font-color {
+  @media (prefers-color-scheme: light) {
+    color: black;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: white
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+
+  #app {
+    -webkit-app-region: drag;
+    width: calc(100vw - 30px);
+    height: calc(100vh - 30px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+}
