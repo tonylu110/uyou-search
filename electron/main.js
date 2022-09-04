@@ -33,8 +33,12 @@ function createWindow () {
     mainWindow.webContents.openDevTools({ mode: 'detach' })
   }
 
-  ipcMain.on("window-close", () => {
+  ipcMain.on("app-close", () => {
     app.quit();
+  });
+
+  ipcMain.on("window-hide", () => {
+    mainWindow.hide()
   });
 
   ipcMain.on('change-big-window', (event, arg) => {
@@ -62,4 +66,8 @@ app.whenReady().then(() => {
 
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
+})
+
+app.on('activate', () => {
+  mainWindow.show()
 })

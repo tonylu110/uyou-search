@@ -15,7 +15,7 @@ import { ref, watchEffect } from 'vue';
 
 const ipcRenderer = require('electron').ipcRenderer
 const closeWindow = () => {
-  ipcRenderer.send("window-close")
+  ipcRenderer.send("app-close")
 }
 
 const emits = defineEmits<{
