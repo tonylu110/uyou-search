@@ -36,6 +36,14 @@ function createWindow () {
   ipcMain.on("window-close", () => {
     app.quit();
   });
+
+  ipcMain.on('change-big-window', (event, arg) => {
+    if (arg) {
+      mainWindow.setSize(800, 600, true)
+    } else {
+      mainWindow.setSize(800, 80, true)
+    }
+  })
 }
 
 app.whenReady().then(() => {
@@ -43,6 +51,8 @@ app.whenReady().then(() => {
 
   mainWindow.once('ready-to-show', () => {
     mainWindow.show()
+    const postion = mainWindow.getPosition()
+    mainWindow.setPosition(postion[0], 250)
   })
 
   app.on('activate', function () {
