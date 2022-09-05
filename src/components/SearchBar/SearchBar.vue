@@ -27,7 +27,7 @@ const broder = ref('')
 watchEffect(() => {
   emits('textValue', text.value)
   ipcRenderer.send('change-big-window', text.value.length > 0)
-  broder.value = (text.value.length > 0) ? '2px solid #00000020' : ''
+  broder.value = (text.value.length > 0) ? '2px solid #75757520' : ''
 })
 </script>
 
@@ -46,7 +46,7 @@ watchEffect(() => {
   border-bottom: v-bind(broder);
 
   input {
-    background-color: #00000020;
+    background-color: #75757520;
     border: none;
     -webkit-app-region: no-drag;
     width: 100%;
@@ -77,7 +77,7 @@ watchEffect(() => {
     }
 
     &:active {
-      background-color: #00000040;
+      background-color: #00000020;
     }
 
     &:hover ~ .show {
@@ -94,7 +94,7 @@ watchEffect(() => {
     padding: 5px;
     border-radius: 50%;
     @include font-color;
-    background-color: #00000020;
+    background-color: #75757520;
     display: flex;
     justify-content: center;
     align-items: center;

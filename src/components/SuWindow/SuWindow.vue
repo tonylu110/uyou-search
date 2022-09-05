@@ -58,7 +58,6 @@ const openLink = (keywords: string) => {
 }
 
 onUnmounted(() => {
-  console.log(1);
   document.removeEventListener('keydown', toKey)
 })
 </script>
