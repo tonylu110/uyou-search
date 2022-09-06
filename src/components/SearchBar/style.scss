@@ -1,0 +1,99 @@
+@import '../../color.scss';
+
+.search-bar {
+  -webkit-app-region: drag;
+  width: calc(100vw - 30px);
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px;
+  overflow: hidden;
+
+  .input {
+    background-color: #75757520;
+    -webkit-app-region: no-drag;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    transition: 0.3s width;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+
+    input {
+      width: calc(100% - 25px);
+      height: 100%;
+      padding: 0 10px;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      font-size: 16px;
+      @include font-color;
+    }
+
+    .search-button {
+      background-color: #99999950;
+      position: absolute;
+      right: -45px;
+      top: 5px;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      transition: all .3s;
+
+      span {
+        @include font-color;
+      }
+
+      &:active {
+        background-color: #99999970;
+      }
+    }
+  }
+
+  .close-button {
+    -webkit-app-region: no-drag;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    color: transparent;
+    position: fixed;
+    right: 15px;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover + .input {
+      width: calc(100% - 50px);
+    }
+
+    &:active {
+      background-color: #00000020;
+    }
+
+    &:hover ~ .show {
+      opacity: 1;
+      right: 15px;
+    }
+  }
+
+  .show {
+    opacity: 0;
+    position: fixed;
+    transition: 0.3s;
+    right: -30px;
+    padding: 5px;
+    border-radius: 50%;
+    @include font-color;
+    background-color: #75757520;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
