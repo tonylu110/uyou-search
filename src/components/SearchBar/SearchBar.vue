@@ -5,6 +5,9 @@
     </div>
     <div class="input">
       <input type="text" v-model="text" />
+      <div class="search-button" @click="text=''" :style="{right: text.length > 0 ? '50px' : ''}">
+        <span class="material-icons">close</span>
+      </div>
       <div class="search-button" @click="search" :style="{right: text.length > 0 ? '5px' : ''}">
         <span class="material-icons">search</span>
       </div>
